@@ -1,0 +1,54 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+        {
+            "env": {
+                "jest/globals": true
+            },
+            "extends": "plugin:jest/recommended",
+            "files": [
+                "./src/__tests__/**"
+            ],
+            "plugins": [
+                "jest"
+            ],
+            "rules": {
+                "comma-dangle": "off",
+                "indent": "off",
+                "jest/valid-expect": "off",
+                "quotes": "off",
+                "semi": "off"
+            }
+        }
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "comma-dangle": [
+            "warn",
+            "always-multiline"
+        ],
+        "indent": [
+            "warn",
+            4
+        ],
+        "linebreak-style": [
+            "warn",
+            "unix"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "semi": [
+            "warn",
+            "always"
+        ]
+    }
+}
